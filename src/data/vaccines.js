@@ -1,7 +1,7 @@
 export default function() {
     return [
         {
-            title: "BCG ID1",
+            title: "BCG ID1 usdusd sdndins sidnids sdinsdisd sdnisdn",
             summary: "Indicada para prevenção da tuberculose",
             price: "Grátis pelo Ministério da Saúde. Em hospitais ou clínicas particulares a vacina pode custar R$ 90,00.",
             collateralEffect: "Normalmente não há. Pode acontecer inchaço, vermelhidão e sensibilidade",

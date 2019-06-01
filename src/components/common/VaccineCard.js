@@ -8,16 +8,21 @@ import {
   CardHeader,
 } from "shards-react";
 import {Collapse} from 'react-collapse';
+import VaccineTakenModal from "./VaccineTakenModal";
 
-const avatarStyle = { position: 'absolute', bottom: '40px', left: 0, textIndent: 0, backgroundColor: 'white' }
-const iconStyle = { position: 'relative', fontSize: '24px', top: 'calc(50% - 10px)', left: 'calc(50% - 8px)' }
+const headerStyle = { position: 'relative' };
+const vaccineButtonStyle = {  cursor: 'pointer' };
+const avatarStyle = { position: 'absolute', bottom: '-15px', left: 0, textIndent: 0, backgroundColor: 'white', cursor: 'pointer' };
+const iconStyle = { position: 'relative', fontSize: '24px', top: 'calc(50% - 10px)', left: 'calc(50% - 8px)', color: '#007bff' };
 
 
 class Vaccines extends React.Component {
     constructor(props) {
         super(props);
     
+        this.takenVaccineModal = null;
         this.state = {
+          test: 0,
           showInfo: false,
         };
       }
@@ -47,25 +52,33 @@ class Vaccines extends React.Component {
       }));
   }
 
+  changeTest(){
+    this.takenVaccineModal.someChange();
+    this.setState(prevState => {
+      return {test: prevState.test + 1}
+    });
+    console.log(this.state.test);
+  }
+
   render() {
 
     return (
         <Card small className="card-post mb-4">
-        <CardHeader className="border-bottom d-flex">
-          <h5 className="card-title">{this.props.vaccine.title}</h5>
-          <div className="my-auto ml-auto">
-            <div size="sm" className={this.getVaccineColor(this.props.vaccine.takenVaccine)}>
-              <i className={this.getVaccineIcon(this.props.vaccine.takenVaccine)} /> {this.getVaccineText(this.props.vaccine.takenVaccine)}
-            </div>
-          </div>
-          <a
-            href="#"
+        <CardHeader className="border-bottom d-flex" style={headerStyle}>
+        <a
             onClick={this.toggleInfo.bind(this)}
             className="card-post__author-avatar card-post__author-avatar--small"
             style={avatarStyle}
         >
             <i className={this.getShowInfoIcon()} style={iconStyle}></i>
         </a>
+          <h5 className="card-title">{this.props.vaccine.title}</h5>
+          <div className="my-auto ml-auto" onClick={this.changeTest.bind(this)} style={vaccineButtonStyle}>
+            <div size="sm" className={this.getVaccineColor(this.props.vaccine.takenVaccine)}>
+              <i className={this.getVaccineIcon(this.props.vaccine.takenVaccine)} /> {this.getVaccineText(this.props.vaccine.takenVaccine)}
+            </div>
+          </div>
+          <VaccineTakenModal onRef={ref => (this.takenVaccineModal = ref)} takenVaccine={this.props.vaccine.takenVaccine} vaccineTitle="BCG"></VaccineTakenModal>
         </CardHeader>
         
         <Collapse isOpened={this.state.showInfo}>

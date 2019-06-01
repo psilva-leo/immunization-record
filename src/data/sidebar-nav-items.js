@@ -10,5 +10,10 @@ export default function() {
       htmlBefore: '<i class="material-icons">view_module</i>',
       to: "/maps",
     },
+    {
+      title: "Fisrt",
+      htmlBefore: '<i class="material-icons">view_module</i>',
+      to: "/first",
+    },
   ];
 }

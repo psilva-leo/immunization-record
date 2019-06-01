@@ -7,6 +7,7 @@ import { DefaultLayout } from "./layouts";
 // Route Views
 import Vaccines from "./views/Vaccines";
 import Maps from "./views/Maps";
+import FirstLoginSteps from "./views/FirstLoginSteps";
 
 export default [
   {
@@ -24,5 +25,10 @@ export default [
     path: "/maps",
     layout: DefaultLayout,
     component: Maps
+  },
+  {
+    path: "/first",
+    layout: DefaultLayout,
+    component: FirstLoginSteps
   }
 ];

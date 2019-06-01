@@ -14,6 +14,7 @@ class Vaccines extends React.Component {
   constructor(props) {
     super(props);
 
+    this.takenVaccineModal = null;
     this.state = {
       groupedVaccinesList: this.vaccinesGroupedByTargetGroup(),
     };

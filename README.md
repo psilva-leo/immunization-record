@@ -4,6 +4,12 @@ Immunization Record is a react web-app to manage immunization record anywhere, a
 
 Thanks for [Designrevision] for the dashboard theme 
 
+Usage
+----
+Docker Compose spawns a nginx server and the web-app. It listens on localhost:80
+docker-compose up -d
+
+
 License
 ----
 
