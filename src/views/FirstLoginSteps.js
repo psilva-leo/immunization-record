@@ -13,7 +13,7 @@ class FirstLoginSteps extends React.Component {
         };
 
 // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-Geocode.setApiKey("AIzaSyC1PYNu-ONvna4V8M1-x-Ewxv8rjg1ohvw");
+Geocode.setApiKey("apikey");
  
 // Enable or disable logs. Its optional.
 Geocode.enableDebug();
