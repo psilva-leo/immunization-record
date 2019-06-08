@@ -81,10 +81,10 @@ Geocode.enableDebug();
     );
   }
 }
-export default geolocated({
-    positionOptions: {
-      enableHighAccuracy: false,
-    },
-    userDecisionTimeout: 5000,
-  })(FirstLoginSteps);
-// export default FirstLoginSteps;
+// export default geolocated({
+//     positionOptions: {
+//       enableHighAccuracy: false,
+//     },
+//     userDecisionTimeout: 5000,
+//   })(FirstLoginSteps);
+export default FirstLoginSteps;

@@ -3,11 +3,12 @@ import { Redirect } from "react-router-dom";
 
 // Layout Types
 import { DefaultLayout } from "./layouts";
+import BlankLayout from './layouts/BlankLayout';
 
 // Route Views
 import Vaccines from "./views/Vaccines";
 import Maps from "./views/Maps";
-import FirstLoginSteps from "./views/FirstLoginSteps";
+import Login from "./views/Login";
 
 export default [
   {
@@ -27,8 +28,8 @@ export default [
     component: Maps
   },
   {
-    path: "/first",
-    layout: DefaultLayout,
-    component: FirstLoginSteps
+    path: "/login",
+    layout: BlankLayout,
+    component: Login
   }
 ];
