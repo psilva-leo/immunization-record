@@ -9,21 +9,29 @@ import BlankLayout from './layouts/BlankLayout';
 import Vaccines from "./views/Vaccines";
 import Maps from "./views/Maps";
 import Login from "./views/Login";
+import Register from "./views/Register";
+import LandingPage from "./views/LandingPage";
 
 export default [
   {
     path: "/",
     exact: true,
-    layout: DefaultLayout,
-    component: () => <Redirect to="/vacinas" />
+    layout: BlankLayout,
+    component: LandingPage
   },
   {
-    path: "/vacinas",
+    path: "/console",
+    exact: true,
+    layout: DefaultLayout,
+    component: () => <Redirect to="/console/vacinas" />
+  },
+  {
+    path: "/console/vacinas",
     layout: DefaultLayout,
     component: Vaccines
   },
   {
-    path: "/maps",
+    path: "/console/maps",
     layout: DefaultLayout,
     component: Maps
   },
@@ -31,5 +39,15 @@ export default [
     path: "/login",
     layout: BlankLayout,
     component: Login
+  },
+  {
+    path: "/register",
+    layout: BlankLayout,
+    component: Register
+  },
+  {
+    path: "/landingpage",
+    layout: BlankLayout,
+    component: LandingPage
   }
 ];

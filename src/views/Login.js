@@ -17,7 +17,7 @@ class Login extends React.Component {
 
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Member Login
+						Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -37,7 +37,7 @@ class Login extends React.Component {
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<Link to="/" class="login100-form-btn" style={{ textDecoration: 'none' }}>
+						<Link to="/" class="login100-form-btn bg-primary text-white text-center rounded p-3" style={{ textDecoration: 'none' }}>
 							Login
 						</Link>
 					</div>
@@ -53,7 +53,7 @@ class Login extends React.Component {
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
+						<a class="txt2" href="/register">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>

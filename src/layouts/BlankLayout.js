@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 import { Container, Row, Col } from "shards-react";
 
 const BlankLayout = ({ children }) => (
-  <Container fluid>
-    <Row>    
+  <div>
       {children}
-    </Row>
-  </Container>
+  </div>
 );
 
 export default BlankLayout;
