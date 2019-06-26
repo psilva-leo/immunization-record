@@ -37,7 +37,7 @@ class Login extends React.Component {
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<Link to="/" class="login100-form-btn bg-primary text-white text-center rounded p-3" style={{ textDecoration: 'none' }}>
+						<Link to="/console" class="login100-form-btn bg-primary text-white text-center rounded p-3" style={{ textDecoration: 'none' }}>
 							Login
 						</Link>
 					</div>
