@@ -14,6 +14,7 @@
     "lodash.find": "^4.6.0",
     "react": "^16.8.3",
     "react-collapse": "^4.0.3",
+    "react-day-picker": "^7.3.2",
     "react-dom": "^16.6.3",
     "react-ga": "^2.5.6",
     "react-geocode": "^0.1.2",
