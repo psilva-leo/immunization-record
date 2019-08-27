@@ -1,0 +1,22 @@
+version: 2.1
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.2.0
+
+workflows:
+  build_and_push_image:
+    jobs:
+      - aws-ecr/build-and-push-image:
+          account-url: ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/
+          context: myContext
+          create-repo: true
+          dockerfile: Dockerfile
+          region: us-east-1
+          repo: immunization-record
+
+workflows:
+  version: 2
+  build_and_push_image:
+    jobs:
+      - build_and_push_image:
+          context: aws

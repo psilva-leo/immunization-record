@@ -11,6 +11,7 @@ import Maps from "./views/Maps";
 import Login from "./views/Login";
 import Register from "./views/Register";
 import LandingPage from "./views/LandingPage";
+import Profile from "./views/UserProfile";
 
 export default [
   {
@@ -34,6 +35,11 @@ export default [
     path: "/console/maps",
     layout: DefaultLayout,
     component: Maps
+  },
+  {
+    path: "/console/profile",
+    layout: DefaultLayout,
+    component: Profile
   },
   {
     path: "/login",
