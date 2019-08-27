@@ -8,7 +8,6 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           account-url: ${AWS_ACCOUNT_NUMBER}.dkr.ecr.us-east-1.amazonaws.com/
-          context: myContext
           create-repo: true
           dockerfile: Dockerfile
           region: us-east-1
