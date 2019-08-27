@@ -13,10 +13,4 @@ workflows:
           dockerfile: Dockerfile
           region: us-east-1
           repo: immunization-record
-
-workflows:
-  version: 2
-  build_and_push_image:
-    jobs:
-      - build_and_push_image:
           context: aws
